@@ -1,0 +1,11 @@
+<div class="todo-list">
+  <div class="todo-list__action">
+    <strong>{{count$ | async}}</strong>
+    <button (click)="add()">add</button>
+  </div>
+  <div class="todo-list__content" *ngFor="let todo of todos$ | async; trackBy: trackByMethod">
+    <ag-todo-item [todo]="todo" (removeHandler)="remove($event)"></ag-todo-item>
+  </div>
+
+  <a [routerLink]="['/dashboard']">go to dashboard</a>
+</div>

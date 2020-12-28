@@ -1,0 +1,7 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+
+<mat-menu #menu="matMenu">
+  <button (click)="click(item)" mat-menu-item *ngFor="let item of menuItems$ | async; trackBy: menuTrackBy">
+    {{item.title}}
+  </button>
+</mat-menu>
