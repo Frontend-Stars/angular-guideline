@@ -1,3 +1,7 @@
-.example-spacer {
-  flex: 1 1 auto;
+.layout-header {
+  display: flex;
+
+  &__menu {
+    flex: 1;
+  }
 }

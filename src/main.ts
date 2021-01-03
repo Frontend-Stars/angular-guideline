@@ -3,6 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { akitaDevtools, enableAkitaProdMode } from '@datorama/akita';
 
 import { RootModule } from './app/root/root.module';
+
 import { environment } from './environments/environment';
 
 if (environment.production) {
@@ -12,5 +13,6 @@ if (environment.production) {
   akitaDevtools();
 }
 
-platformBrowserDynamic().bootstrapModule(RootModule)
+platformBrowserDynamic()
+  .bootstrapModule(RootModule)
   .catch(err => console.error(err));

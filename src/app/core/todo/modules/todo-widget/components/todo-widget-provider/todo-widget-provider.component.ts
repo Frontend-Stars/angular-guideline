@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+
 import { TodoManager } from '../../../../managers/todo/todo.manager';
+
 
 @Component({
   selector: 'ag-todo-widget-provider',
@@ -15,13 +17,13 @@ export class TodoWidgetProviderComponent implements OnInit {
 
   ngOnInit(): void {
     this.todoManager.getTodoList().subscribe({
-      next: (data) => {
+      next(data): void {
         console.log(data);
       },
-      complete: () => {
+      complete(): void {
         console.log('complete');
       },
-      error: (error) => {
+      error(error): void {
         console.log(error);
       }
     });

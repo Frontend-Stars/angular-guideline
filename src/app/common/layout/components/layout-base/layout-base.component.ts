@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
+
 @Component({
   selector: 'ag-layout-base',
   templateUrl: './layout-base.component.html',

@@ -1,7 +1,11 @@
-<mat-toolbar color="primary">
-  <span>
-    <img width="125" src="assets/logo-nav@2x.png" alt="Angular 2 logotype" />
-  </span>
-  <span class="example-spacer"></span>
-  <ng-content></ng-content>
-</mat-toolbar>
+<header class="layout-header">
+  <div class="layout-header__logo">
+    <ng-content select="[header-logo]"></ng-content>
+  </div>
+  <div class="layout-header__search">
+    <ng-content select="[header-search]"></ng-content>
+  </div>
+  <div class="layout-header__menu">
+    <ng-content select="[header-menu]"></ng-content>
+  </div>
+</header>

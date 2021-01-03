@@ -8,6 +8,7 @@ import { TodoStore } from '../../stores/todo/todo.store';
 import { TodoResource } from '../../resources/todo/todo.resource';
 import { loadingWrapper } from '../../../../common/utility/loading-wrapper/loading-wrapper.operator';
 
+
 @Injectable()
 export class TodoManager {
   todoListLoading$ = new BehaviorSubject(false);
@@ -21,14 +22,14 @@ export class TodoManager {
     return this.todoResource
       .getTodoList()
       .pipe(loadingWrapper(this.todoListLoading$))
-      .pipe(tap((responce) => {
-        this.todoStore.set(responce);
+      .pipe(tap((response) => {
+        this.todoStore.set(response);
       }));
   }
 
   addTodo(todo: Partial<TodoModel>): void {
     this.todoStore.add({
-      id: guid(),
+      id: todo?.id ? todo.id : guid(),
       title: todo.title,
       completed: todo.completed
     });

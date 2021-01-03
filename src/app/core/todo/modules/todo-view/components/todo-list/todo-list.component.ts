@@ -1,7 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ID } from '@datorama/akita';
 import { Observable } from 'rxjs';
+
 import { TodoList, TodoModel } from '../../../../types/todo.type';
+
 import { TodoManager } from '../../../../managers/todo/todo.manager';
 import { TodoQuery } from '../../../../stores/todo/todo.query';
 
