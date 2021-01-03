@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
-
 import {
   NavigationMenuItem,
   NavigationMenuItems,
   NavigationMenuManager,
 } from '../../../../common/navigation/types/navigation-menu.type';
+
 
 @Injectable()
 export class DashboardNavigationMenuManager implements NavigationMenuManager {

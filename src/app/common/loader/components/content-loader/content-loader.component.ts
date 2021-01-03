@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'ag-content-loader',
   templateUrl: './content-loader.component.html',

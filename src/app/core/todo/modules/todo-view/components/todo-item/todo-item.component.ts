@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-
 import { TodoModel } from '../../../../types/todo.type';
 
 

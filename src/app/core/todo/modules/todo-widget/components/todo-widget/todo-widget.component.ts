@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { TodoQuery } from '../../../../stores/todo/todo.query';
 
+
 @Component({
   selector: 'ag-todo-widget',
   templateUrl: './todo-widget.component.html',

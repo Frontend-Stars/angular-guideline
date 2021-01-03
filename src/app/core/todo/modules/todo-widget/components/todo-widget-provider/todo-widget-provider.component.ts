@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-
 import { TodoManager } from '../../../../managers/todo/todo.manager';
 
 

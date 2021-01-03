@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { DASHBOARD_ROUTING_ROOT_URL } from '../core/dashboard/consts/router.const';
 import { TODO_ROUTING_ROOT_URL } from '../core/todo/consts/router.const';
 

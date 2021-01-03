@@ -4,6 +4,7 @@ import { Observable, timer } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { TodoList } from '../../types/todo.type';
 
+
 @Injectable()
 export class TodoResource {
 
