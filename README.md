@@ -26,5 +26,8 @@ npm start
 * group import by path to source file and add new line after each new group imports
 * if your want provide services by injectable token please create for them new component with a suffix(provider) in name e.g. (todo-provider)
 
+## Examples
+_in progress (I will create deploy examples to heroku platform)_
+
 ## FAQ
 if you have questions or interesting cases, which does not allow you to sleep, please create [new issue](https://github.com/Frontend-Stars/angular-guideline/issues) (please add label question to issue) and we try help to you
