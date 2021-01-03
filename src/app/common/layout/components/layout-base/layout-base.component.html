@@ -1,12 +1,17 @@
 <ag-layout-header>
-  <ng-content select="[search-place]"></ng-content>
-  <ag-menu></ag-menu>
+  <ng-container header-logo>
+    <span>logo here</span>
+  </ng-container>
+  <ng-container header-search>
+    <ng-content select="[search-place]"></ng-content>
+  </ng-container>
+  <ng-container header-menu>
+    <ag-menu></ag-menu>
+  </ng-container>
 </ag-layout-header>
 
-<ag-layout-content class="layout-base__content">
+<ag-layout-content>
   <ng-content></ng-content>
 </ag-layout-content>
 
-<ag-layout-footer>
-  <p>&copy; 2020;</p>
-</ag-layout-footer>
+<ag-layout-footer></ag-layout-footer>

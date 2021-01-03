@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, Inject } from '@angular/core';
 import { SEARCH_FORM, SearchForm } from '../../types/search.type';
 
+
 @Component({
   selector: 'ag-search-form',
   templateUrl: './search-form.component.html',

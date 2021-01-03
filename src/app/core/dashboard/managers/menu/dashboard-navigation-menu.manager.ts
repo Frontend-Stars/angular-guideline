@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
+
 import {
   NavigationMenuItem,
   NavigationMenuItems,

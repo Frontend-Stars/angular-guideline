@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+
 import { TodoManager } from '../../managers/todo/todo.manager';
 
 
@@ -20,13 +21,13 @@ export class TodoPageComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
     this.todoManager.getTodoList().subscribe({
-      next: (data) => {
+      next(data): void {
         console.log(data);
       },
-      complete: () => {
+      complete(): void {
         console.log('complete');
       },
-      error: (error) => {
+      error(error): void {
         console.log(error);
       }
     });

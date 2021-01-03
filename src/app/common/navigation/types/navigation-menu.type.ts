@@ -1,6 +1,7 @@
 import { InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
 
+
 export interface NavigationMenuItem {
   title: string;
   command: string;

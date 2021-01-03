@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { NAVIGATION_MENU_MANAGER, NavigationMenuItem, NavigationMenuManager } from '../../types/navigation-menu.type';
 
+
 @Component({
   selector: 'ag-menu',
   templateUrl: './menu.component.html',
