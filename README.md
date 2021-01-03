@@ -23,7 +23,6 @@ npm start
 
 ## Code style convention
 * add two new line before export entity (Components, Modules, etc...)
-* group import by path to source file and add new line after each new group imports
 * if your want provide services by injectable token please create for them new component with a suffix(provider) in name e.g. (todo-provider)
 
 ## Examples
