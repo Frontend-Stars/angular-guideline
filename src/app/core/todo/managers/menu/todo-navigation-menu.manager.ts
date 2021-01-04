@@ -5,7 +5,7 @@ import {
   NavigationMenuItem,
   NavigationMenuItems,
   NavigationMenuManager,
-} from '../../../../common/navigation/types/navigation-menu.type';
+} from '@common/navigation/types/navigation-menu.type';
 
 
 @Injectable()

@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { RootRoutingModule } from './root-routing.module';
-
 import { RootComponent } from './components/root/root.component';
 
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SearchForm } from '../../../../common/search/types/search.type';
+import { SearchForm } from '@common/search/types/search.type';
 
 
 @Injectable()

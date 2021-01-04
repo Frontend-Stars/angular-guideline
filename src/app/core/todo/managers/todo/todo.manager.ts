@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { guid } from '@datorama/akita';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { loadingWrapper } from '../../../../common/utility/loading-wrapper/loading-wrapper.operator';
+import { loadingWrapper } from '@common/utility/loading-wrapper/loading-wrapper.operator';
 import { TodoList, TodoModel } from '../../types/todo.type';
 import { TodoStore } from '../../stores/todo/todo.store';
 import { TodoResource } from '../../resources/todo/todo.resource';

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NAVIGATION_MENU_MANAGER } from '../../common/navigation/types/navigation-menu.type';
-import { SEARCH_FORM } from '../../common/search/types/search.type';
-import { SearchModule } from '../../common/search/search.module';
-import { LayoutModule } from '../../common/layout/layout.module';
-import { LoaderModule } from '../../common/loader/loader.module';
+import { NAVIGATION_MENU_MANAGER } from '@common/navigation/types/navigation-menu.type';
+import { SEARCH_FORM } from '@common/search/types/search.type';
+import { SearchModule } from '@common/search/search.module';
+import { LayoutModule } from '@common/layout/layout.module';
+import { LoaderModule } from '@common/loader/loader.module';
 import { TodoPageComponent } from './components/todo-page/todo-page.component';
 import { TodoResource } from './resources/todo/todo.resource';
 import { TodoManager } from './managers/todo/todo.manager';
