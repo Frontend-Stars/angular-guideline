@@ -4,13 +4,18 @@
 
 ##### Install npm dependencies:
 ```
-npm install
+make install
 ```
 
 ##### Quick Start
 ```
-npm start
+cd ./guideline && npm start
 ```
+for run guideline app
+```
+cd ./anti-pattern && npm start
+```
+for run anti pattern example app
 
 ## Table of contents
 

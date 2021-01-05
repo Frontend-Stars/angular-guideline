@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
     "@datorama/akita": "^5.2.5",
+    "anti-pattern": "file:../anti-pattern",
+    "cd": "^0.3.3",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
