@@ -9,6 +9,10 @@ import { HeaderComponent } from './header/header.component';
     NavigationMenuComponent,
     HeaderComponent
   ],
+  exports: [
+    NavigationMenuComponent,
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
     RouterModule

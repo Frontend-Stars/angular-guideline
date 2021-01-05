@@ -1,7 +1,7 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<button>Menu</button>
 
-<mat-menu #menu="matMenu">
-  <button [routerLink]="item.link" mat-menu-item *ngFor="let item of items; trackBy: menuTrackBy">
+<nav>
+  <button [routerLink]="item.link" *ngFor="let item of items; trackBy: menuTrackBy">
     {{item.title}}
   </button>
-</mat-menu>
+</nav>
