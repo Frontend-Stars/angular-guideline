@@ -11,11 +11,11 @@ make install
 ```
 cd ./guideline && npm start
 ```
-for run guideline app
+for run guideline app [http://localhost:4200](http://localhost:4200)
 ```
 cd ./anti-pattern && npm start
 ```
-for run anti pattern example app
+for run anti pattern example app [http://localhost:4201](http://localhost:4201)
 
 ## Table of contents
 
