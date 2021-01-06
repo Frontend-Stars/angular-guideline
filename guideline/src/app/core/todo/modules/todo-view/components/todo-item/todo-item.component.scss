@@ -1,2 +1,7 @@
+@import 'src/styles/button';
+
 .todo-item {
+  &__button {
+    @include button;
+  }
 }
