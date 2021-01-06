@@ -18,8 +18,4 @@ export class TodoSearchForm implements SearchForm {
   constructor(
     private readonly fb: FormBuilder
   ) {}
-
-  submit(): void {
-    console.log('todo maybe write form data to store', this.form.value);
-  }
 }

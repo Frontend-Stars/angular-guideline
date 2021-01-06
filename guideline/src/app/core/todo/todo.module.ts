@@ -14,11 +14,13 @@ import { TodoStore } from './stores/todo/todo.store';
 import { TodoQuery } from './stores/todo/todo.query';
 import { TodoSearchForm } from './forms/search/search.form';
 import { TodoViewModule } from './modules/todo-view/todo-view.module';
+import { TodoSearchFormComponent } from './components/todo-search-form/todo-search-form.component';
 
 
 @NgModule({
   declarations: [
     TodoPageComponent,
+    TodoSearchFormComponent,
   ],
   providers: [
     TodoManager,

@@ -1,4 +1,10 @@
-import { Component, ChangeDetectionStrategy, Inject } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Inject,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { SEARCH_FORM, SearchForm } from '../../types/search.type';
 
 
@@ -9,6 +15,8 @@ import { SEARCH_FORM, SearchForm } from '../../types/search.type';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchFormComponent {
+  @Output() doSearch = new EventEmitter();
+
   form = this.searchForm.form;
 
   constructor(
@@ -16,6 +24,6 @@ export class SearchFormComponent {
   ) {}
 
   submit(): void {
-    this.searchForm.submit();
+    this.doSearch.emit();
   }
 }

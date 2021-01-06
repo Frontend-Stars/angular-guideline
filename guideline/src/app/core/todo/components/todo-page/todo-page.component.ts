@@ -1,4 +1,8 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  OnInit,
+} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TodoManager } from '../../managers/todo/todo.manager';
 
@@ -14,7 +18,7 @@ export class TodoPageComponent implements OnInit {
 
   constructor(
     private readonly titleService: Title,
-    private readonly todoManager: TodoManager
+    private readonly todoManager: TodoManager,
   ) {}
 
   ngOnInit(): void {
