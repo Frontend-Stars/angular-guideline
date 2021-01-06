@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { tap } from 'rxjs/operators';
 import { TodoQuery } from '../../../../stores/todo/todo.query';
 
 
@@ -10,7 +9,7 @@ import { TodoQuery } from '../../../../stores/todo/todo.query';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoWidgetComponent {
-  completedTodos$ = this.todoQuery.completedTodos$.pipe(tap(console.log));
+  completedTodos$ = this.todoQuery.completedTodos$;
 
   constructor(
     private readonly todoQuery: TodoQuery
