@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TodoQuery } from '../../../../stores/todo/todo.query';
+import { TodoManager } from '../../../../managers/todo/todo.manager';
+import { TodoModel } from '../../../../types/todo.type';
 
 
 @Component({
@@ -12,6 +14,11 @@ export class TodoWidgetComponent {
   completedTodos$ = this.todoQuery.completedTodos$;
 
   constructor(
-    private readonly todoQuery: TodoQuery
+    private readonly todoQuery: TodoQuery,
+    private readonly todoManager: TodoManager,
   ) { }
+
+  remove(todo: TodoModel): void {
+    this.todoManager.removeTodo(todo);
+  }
 }

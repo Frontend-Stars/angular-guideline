@@ -1,5 +1,7 @@
 <ag-todo-widget-provider>
-  <ng-container>
-    <ag-todo-item *ngFor="let todo of completedTodos$ | async" [todo]="todo"></ag-todo-item>
-  </ng-container>
+  <ag-todo-item
+    *ngFor="let todo of completedTodos$ | async"
+    (removeHandler)="remove($event)"
+    [todo]="todo"
+  ></ag-todo-item>
 </ag-todo-widget-provider>
