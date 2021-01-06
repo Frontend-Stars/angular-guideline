@@ -6,13 +6,7 @@ import { SearchForm } from '@common/search/types/search.type';
 @Injectable()
 export class TodoSearchForm implements SearchForm {
   form: FormGroup  = this.fb.group({
-    searchInput: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(3)
-      ]
-    ]
+    searchInput: ['']
   });
 
   constructor(

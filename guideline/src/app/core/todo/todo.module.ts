@@ -6,6 +6,7 @@ import { SEARCH_FORM } from '@common/search/types/search.type';
 import { SearchModule } from '@common/search/search.module';
 import { LayoutModule } from '@common/layout/layout.module';
 import { LoaderModule } from '@common/loader/loader.module';
+import { FilterModule } from '@common/filter/filter.module';
 import { TodoPageComponent } from './components/todo-page/todo-page.component';
 import { TodoResource } from './resources/todo/todo.resource';
 import { TodoManager } from './managers/todo/todo.manager';
@@ -16,6 +17,7 @@ import { TodoSearchForm } from './forms/search/search.form';
 import { TodoAddForm } from './forms/todo-add/todo-add.form';
 import { TodoViewModule } from './modules/todo-view/todo-view.module';
 import { TodoSearchFormComponent } from './components/todo-search-form/todo-search-form.component';
+import { TodoFilterManager } from './managers/filter/todo-filter.manager';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { TodoSearchFormComponent } from './components/todo-search-form/todo-sear
       provide: SEARCH_FORM,
       useClass: TodoSearchForm,
     },
+    TodoFilterManager
   ],
   imports: [
     HttpClientModule,
@@ -45,6 +48,7 @@ import { TodoSearchFormComponent } from './components/todo-search-form/todo-sear
     SearchModule,
     LoaderModule,
     TodoViewModule,
+    FilterModule.forChild({ name: 'todo-filter', resettable: true })
   ],
 })
 export class TodoModule { }

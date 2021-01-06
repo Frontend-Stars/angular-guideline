@@ -11,7 +11,7 @@ import { TodoModel } from '../../../../types/todo.type';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoWidgetComponent {
-  completedTodos$ = this.todoQuery.completedTodos$;
+  todos$ = this.todoQuery.todos$;
 
   constructor(
     private readonly todoQuery: TodoQuery,

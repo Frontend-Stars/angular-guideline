@@ -6,14 +6,9 @@ import { TodoState } from '../../types/todo.type';
 
 @Injectable()
 export class TodoQuery extends QueryEntity<TodoState> {
-  completedTodos$ = this.selectAll({
-    filterBy: [
-      ({ completed }) => completed
-    ]
-  });
+  todos$ = this.selectAll();
 
   constructor(protected store: TodoStore) {
     super(store);
   }
-
 }

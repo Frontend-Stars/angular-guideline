@@ -16,17 +16,17 @@ export class TodoResource {
     return timer(1500).pipe(map(() => [
       {
         id: 1,
-        title: 'example todo item from server #1',
+        title: 'example todo item from server #1 awesome',
         completed: false
       },
       {
         id: 2,
-        title: 'example todo item from server #2',
+        title: 'example todo item from server #2 awe nice',
         completed: false
       },
       {
         id: 3,
-        title: 'example todo item from server #3',
+        title: 'example todo item from server #3 good',
         completed: true
       }
     ]));
