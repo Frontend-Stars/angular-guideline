@@ -18,4 +18,8 @@ export class TodoSearchForm implements SearchForm {
   constructor(
     private readonly fb: FormBuilder
   ) {}
+
+  reset(): void {
+    this.form.reset();
+  }
 }

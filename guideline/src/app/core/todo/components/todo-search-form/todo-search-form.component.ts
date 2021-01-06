@@ -21,6 +21,8 @@ export class TodoSearchFormComponent {
 
   doSearch(): void {
     console.log('doSearch', this.searchForm.form.value);
+
+    this.searchForm.reset();
   }
 
 }

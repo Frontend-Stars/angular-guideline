@@ -2,7 +2,7 @@ import {
   Component,
   ChangeDetectionStrategy,
   forwardRef,
-  Input,
+  Input, ChangeDetectorRef,
 } from '@angular/core';
 import {
   ControlValueAccessor,
@@ -45,6 +45,10 @@ export class InputComponent implements ControlValueAccessor {
 
   private inputValue = '';
 
+  constructor(
+    private readonly cdr: ChangeDetectorRef
+  ) {}
+
   setDisabledState(state: boolean): void {
     this.disabled = state;
   }
@@ -53,6 +57,7 @@ export class InputComponent implements ControlValueAccessor {
     this.inputValue = value;
     this.onChange(value);
     this.onTouched();
+    this.cdr.detectChanges();
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
