@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { guid } from '@datorama/akita';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { loadingWrapper } from '@common/utility/loading-wrapper/loading-wrapper.operator';
+import { Observable, of } from 'rxjs';
+import { switchMap, tap } from 'rxjs/operators';
 import { TodoList, TodoModel } from '../../types/todo.type';
 import { TodoStore } from '../../stores/todo/todo.store';
 import { TodoResource } from '../../resources/todo/todo.resource';
@@ -10,20 +9,22 @@ import { TodoResource } from '../../resources/todo/todo.resource';
 
 @Injectable()
 export class TodoManager {
-  todoListLoading$ = new BehaviorSubject(false);
-
   constructor(
     private readonly todoResource: TodoResource,
     private readonly todoStore: TodoStore
   ) { }
 
   getTodoList(): Observable<TodoList> {
-    return this.todoResource
-      .getTodoList()
-      .pipe(loadingWrapper(this.todoListLoading$))
-      .pipe(tap((response) => {
-        this.todoStore.set(response);
-      }));
+    return of(null)
+      .pipe(
+        tap(() => { this.todoStore.setLoading(true); }),
+        switchMap(() => this.todoResource.getTodoList()),
+        tap((response) => {
+          this.todoStore.set(response);
+        }, (error) => {
+          this.todoStore.setError(error);
+        })
+      );
   }
 
   addTodo(todo: Partial<TodoModel>): void {
