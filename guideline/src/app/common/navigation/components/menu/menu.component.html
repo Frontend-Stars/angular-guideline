@@ -1,7 +1,11 @@
-<button>Menu</button>
+<button class="menu-icon" (click)="toggle()">
+  <span class="menu-icon__line"></span>
+  <span class="menu-icon__line"></span>
+  <span class="menu-icon__line"></span>
+</button>
 
-<nav>
-  <button (click)="click(item)" *ngFor="let item of menuItems$ | async; trackBy: menuTrackBy">
+<nav class="menu-nav" [class.menu-nav--opened]="isOpened$ | async">
+  <a class="menu-nav__item" (click)="click($event, item)" *ngFor="let item of menuItems$ | async; trackBy: menuTrackBy">
     {{item.title}}
-  </button>
+  </a>
 </nav>

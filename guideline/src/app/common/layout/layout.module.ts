@@ -5,6 +5,7 @@ import { LayoutHeaderComponent } from './components/layout-header/layout-header.
 import { LayoutFooterComponent } from './components/layout-footer/layout-footer.component';
 import { LayoutContentComponent } from './components/layout-content/layout-content.component';
 import { NavigationModule } from '../navigation/navigation.module';
+import { BrandModule } from '../brand/brand.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { NavigationModule } from '../navigation/navigation.module';
   imports: [
     CommonModule,
     NavigationModule,
+    BrandModule,
   ],
 })
 export class LayoutModule { }

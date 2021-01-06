@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import {
-  NavigationMenuItem,
   NavigationMenuItems,
   NavigationMenuManager,
 } from '@common/navigation/types/navigation-menu.type';
+import { BaseNavigationMenuManager } from '@common/navigation/managers/menu/base-navigation-menu.manager';
 
 
 @Injectable()
-export class TodoNavigationMenuManager implements NavigationMenuManager {
-  constructor(
-    private readonly router: Router
-  ) {}
-
+export class TodoNavigationMenuManager
+  extends BaseNavigationMenuManager
+  implements NavigationMenuManager
+{
   getItems(): Observable<NavigationMenuItems> {
     return of([
       {
@@ -25,9 +23,5 @@ export class TodoNavigationMenuManager implements NavigationMenuManager {
         command: '/dashboard'
       }
     ]);
-  }
-
-  clickAction(item: NavigationMenuItem): void {
-    this.router.navigate([item.command]);
   }
 }

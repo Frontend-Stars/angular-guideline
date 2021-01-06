@@ -1,6 +1,6 @@
-<ag-layout-header>
+<ag-layout-header class="layout-base__header">
   <ng-container header-logo>
-    <span>logo here</span>
+    <ag-logo></ag-logo>
   </ng-container>
   <ng-container header-search>
     <ng-content select="[search-place]"></ng-content>
@@ -10,8 +10,8 @@
   </ng-container>
 </ag-layout-header>
 
-<ag-layout-content>
+<ag-layout-content class="layout-base__content">
   <ng-content></ng-content>
 </ag-layout-content>
 
-<ag-layout-footer></ag-layout-footer>
+<ag-layout-footer class="layout-base__footer"></ag-layout-footer>

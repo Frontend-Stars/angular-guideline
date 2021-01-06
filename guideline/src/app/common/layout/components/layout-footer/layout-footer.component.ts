@@ -7,4 +7,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./layout-footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LayoutFooterComponent {}
+export class LayoutFooterComponent {
+  today = new Date();
+}

@@ -1,3 +1,8 @@
 .layout-footer {
-  display: block;
+  display: flex;
+  position: sticky;
+  box-shadow: 0 -4px 10px -5px rgba(0, 0, 0, 0.4);
+  background-color: #535353;
+  color: #ffffff;
+  padding: 7px 10px;
 }

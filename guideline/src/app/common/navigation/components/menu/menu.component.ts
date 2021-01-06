@@ -9,16 +9,23 @@ import { NAVIGATION_MENU_MANAGER, NavigationMenuItem, NavigationMenuManager } fr
 })
 export class MenuComponent {
   menuItems$ = this.navigationMenuManager.getItems();
+  isOpened$ = this.navigationMenuManager.isOpened$;
 
   constructor(
     @Inject(NAVIGATION_MENU_MANAGER) private readonly navigationMenuManager: NavigationMenuManager
   ) { }
 
-  click(item: NavigationMenuItem): void {
+  click(event: Event, item: NavigationMenuItem): void {
+    event.preventDefault();
     this.navigationMenuManager.clickAction(item);
+    this.navigationMenuManager.toggle();
   }
 
   menuTrackBy(index: number, item: NavigationMenuItem): string {
     return `${item.title}-${item.command}`;
+  }
+
+  toggle(): void {
+    this.navigationMenuManager.toggle();
   }
 }
