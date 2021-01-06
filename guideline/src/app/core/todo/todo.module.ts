@@ -13,6 +13,7 @@ import { TodoNavigationMenuManager } from './managers/menu/todo-navigation-menu.
 import { TodoStore } from './stores/todo/todo.store';
 import { TodoQuery } from './stores/todo/todo.query';
 import { TodoSearchForm } from './forms/search/search.form';
+import { TodoAddForm } from './forms/todo-add/todo-add.form';
 import { TodoViewModule } from './modules/todo-view/todo-view.module';
 import { TodoSearchFormComponent } from './components/todo-search-form/todo-search-form.component';
 
@@ -27,6 +28,7 @@ import { TodoSearchFormComponent } from './components/todo-search-form/todo-sear
     TodoResource,
     TodoStore,
     TodoQuery,
+    TodoAddForm,
     {
       provide: NAVIGATION_MENU_MANAGER,
       useClass: TodoNavigationMenuManager,

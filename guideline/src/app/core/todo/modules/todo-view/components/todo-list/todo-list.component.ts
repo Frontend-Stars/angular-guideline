@@ -21,13 +21,6 @@ export class TodoListComponent {
     private readonly todoQuery: TodoQuery
   ) {}
 
-  add(): void {
-    this.todoManager.addTodo({
-      title: 'test',
-      completed: true
-    });
-  }
-
   remove(todo: TodoModel): void {
     this.todoManager.removeTodo(todo);
   }

@@ -1,7 +1,7 @@
 <div class="todo-list">
   <div class="todo-list__action todo-list-action">
+    <ag-todo-add></ag-todo-add>
     <strong class="todo-list-action__count">{{count$ | async}}</strong>
-    <button class="todo-list-action__button" (click)="add()">add</button>
   </div>
   <div class="todo-list__content" *ngFor="let todo of todos$ | async; trackBy: trackByMethod">
     <ag-todo-item [todo]="todo" (removeHandler)="remove($event)"></ag-todo-item>
