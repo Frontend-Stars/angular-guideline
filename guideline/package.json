@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.4",
-    "@angular/cdk": "^10.2.7",
+    "@angular/cdk": "^11.2.3",
     "@angular/common": "~11.2.4",
     "@angular/compiler": "~11.2.4",
     "@angular/core": "~11.2.4",
@@ -23,7 +23,7 @@
     "@datorama/akita": "^5.2.5",
     "cd": "^0.3.3",
     "normalize.css": "^8.0.1",
-    "rxjs": "~6.5.5",
+    "rxjs": "~6.6.6",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
