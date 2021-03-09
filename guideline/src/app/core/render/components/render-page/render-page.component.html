@@ -1,0 +1,25 @@
+<ag-layout-base>
+  <form [formGroup]="form">
+    <label>
+      <span>Name: </span>
+      <input formControlName="name" />
+    </label>
+
+    <button (click)="reset()">reset</button>
+    <button (click)="submit()">save</button>
+    <button (click)="change()">change string prop</button>
+  </form>
+  <div class="render-page-result">
+    {{ form.get('name').value | test }}
+  </div>
+
+  <h3>OnPush Object</h3>
+  <ag-render-test [test]="test"></ag-render-test>
+  <h3>Default Object</h3>
+  <ag-render-test-v [test]="test"></ag-render-test-v>
+
+  <h3>OnPush String</h3>
+  <ag-render-test [test]="test2"></ag-render-test>
+  <h3>Default String</h3>
+  <ag-render-test-v [test]="test2"></ag-render-test-v>
+</ag-layout-base>
