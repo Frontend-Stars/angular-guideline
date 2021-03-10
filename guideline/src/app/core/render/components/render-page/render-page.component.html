@@ -1,0 +1,36 @@
+<ag-layout-base>
+  <form [formGroup]="form">
+    <label>
+      <span>Name: </span>
+      <input formControlName="name" />
+    </label>
+
+    <button (click)="reset()">reset</button>
+    <button (click)="submit()">apply changes</button>
+    <button (click)="toggleTransport()">toggle transport</button>
+  </form>
+
+  <div class="render-page-result">
+    {{ form.get('name').value | test }}
+  </div>
+
+  <h3>Object</h3>
+
+  <blockquote [class.highlight]="isLinkTransport">
+    <h4>Default</h4>
+    <ag-render-test-v [test]="test"></ag-render-test-v>
+
+    <h4>OnPush</h4>
+    <ag-render-test [test]="test"></ag-render-test>
+  </blockquote>
+
+  <h3>String</h3>
+
+  <blockquote [class.highlight]="!isLinkTransport">
+    <h4>Default</h4>
+    <ag-render-test-v [test]="test2"></ag-render-test-v>
+
+    <h4>OnPush</h4>
+    <ag-render-test [test]="test2"></ag-render-test>
+  </blockquote>
+</ag-layout-base>

@@ -1,11 +1,16 @@
-import { Component, Inject } from '@angular/core';
-import { NAVIGATION_MENU_MANAGER, NavigationMenuItem, NavigationMenuManager } from '../../types/navigation-menu.type';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import {
+  NAVIGATION_MENU_MANAGER,
+  NavigationMenuItem,
+  NavigationMenuManager,
+} from '../../types/navigation-menu.type';
 
 
 @Component({
   selector: 'ag-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent {
   menuItems$ = this.navigationMenuManager.getItems();
