@@ -6,20 +6,31 @@
     </label>
 
     <button (click)="reset()">reset</button>
-    <button (click)="submit()">save</button>
-    <button (click)="change()">change string prop</button>
+    <button (click)="submit()">apply changes</button>
+    <button (click)="toggleTransport()">toggle transport</button>
   </form>
+
   <div class="render-page-result">
     {{ form.get('name').value | test }}
   </div>
 
-  <h3>OnPush Object</h3>
-  <ag-render-test [test]="test"></ag-render-test>
-  <h3>Default Object</h3>
-  <ag-render-test-v [test]="test"></ag-render-test-v>
+  <h3>Object</h3>
 
-  <h3>OnPush String</h3>
-  <ag-render-test [test]="test2"></ag-render-test>
-  <h3>Default String</h3>
-  <ag-render-test-v [test]="test2"></ag-render-test-v>
+  <blockquote [class.highlight]="isLinkTransport">
+    <h4>Default</h4>
+    <ag-render-test-v [test]="test"></ag-render-test-v>
+
+    <h4>OnPush</h4>
+    <ag-render-test [test]="test"></ag-render-test>
+  </blockquote>
+
+  <h3>String</h3>
+
+  <blockquote [class.highlight]="!isLinkTransport">
+    <h4>Default</h4>
+    <ag-render-test-v [test]="test2"></ag-render-test-v>
+
+    <h4>OnPush</h4>
+    <ag-render-test [test]="test2"></ag-render-test>
+  </blockquote>
 </ag-layout-base>

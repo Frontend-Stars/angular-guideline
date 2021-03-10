@@ -18,7 +18,8 @@ export class RenderPageComponent {
   test: any = {
     name: 'kek'
   };
-  test2 = 'kek';
+  test2 = '';
+  isLinkTransport = true;
 
   constructor(
     private fb: FormBuilder
@@ -27,14 +28,17 @@ export class RenderPageComponent {
 
   reset(): void {
     this.form.reset({ name: 'test' });
-    this.test2 = 'kek';
   }
 
   submit(): void {
-    this.test.name = this.form.value.name;
+    if (this.isLinkTransport) {
+      this.test.name = this.form.value.name;
+    } else {
+      this.test2 = this.form.value.name;
+    }
   }
 
-  change(): void {
-    this.test2 = 'kek is changed';
+  toggleTransport(): void {
+    this.isLinkTransport = !this.isLinkTransport;
   }
 }
