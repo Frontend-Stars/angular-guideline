@@ -9,11 +9,11 @@ make install
 
 ##### Quick Start
 ```
-cd ./guideline && npm start
+make guideline
 ```
 for run guideline app [http://localhost:4200](http://localhost:4200)
 ```
-cd ./anti-pattern && npm start
+make anti
 ```
 for run anti pattern example app [http://localhost:4201](http://localhost:4201)
 

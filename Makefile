@@ -5,5 +5,5 @@ install:
 guideline:
 	cd ./guideline && npm start
 
-guideline:
+anti:
 	cd ./anti-pattern && npm start

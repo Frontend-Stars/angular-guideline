@@ -1,4 +1,6 @@
-<div *ngFor="let item of data; trackBy: track">
-  <span>{{item.uuid}}</span>
-  <span>{{item.name}}</span>
-</div>
+<table>
+  <tr *ngFor="let item of data; trackBy: track">
+    <td>{{item.uuid}}</td>
+    <td>{{item.name}}</td>
+  </tr>
+</table>
