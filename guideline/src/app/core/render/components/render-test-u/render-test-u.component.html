@@ -1,0 +1,8 @@
+<pre>
+  <input #input />
+  <button #button>click me!</button>
+
+  <div>{{ data$ | async | json }}</div>
+
+  <button (click)="change2(input.value)">another button</button>
+</pre>

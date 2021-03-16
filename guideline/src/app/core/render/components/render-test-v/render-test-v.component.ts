@@ -1,4 +1,5 @@
 import {
+  ChangeDetectorRef,
   Component,
   Input,
 } from '@angular/core';
@@ -9,4 +10,14 @@ import {
 })
 export class RenderTestVComponent {
   @Input() test: any;
+
+  constructor(private cdr: ChangeDetectorRef) {
+    cdr.detach();
+  }
+
+  log(): boolean {
+    console.log('RenderTestVComponent');
+
+    return true;
+  }
 }

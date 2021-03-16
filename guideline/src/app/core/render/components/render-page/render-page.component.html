@@ -1,4 +1,12 @@
 <ag-layout-base>
+  <div>
+    <button [class.highlight]="isLinkTransport" (click)="setLinkTransport()">set link transport</button>
+    <button [class.highlight]="isPrimitiveTransport" (click)="setPrimitiveTransport()">set primitive transport</button>
+    <button [class.highlight]="isObservableTransport" (click)="setObservableTransport()">set observable transport</button>
+
+    <button #button>out of zone button</button>
+    <button (click)="doRequest()">do request in zone</button>
+  </div>
   <form [formGroup]="form">
     <label>
       <span>Name: </span>
@@ -7,30 +15,58 @@
 
     <button (click)="reset()">reset</button>
     <button (click)="submit()">apply changes</button>
-    <button (click)="toggleTransport()">toggle transport</button>
   </form>
 
   <div class="render-page-result">
     {{ form.get('name').value | test }}
   </div>
 
-  <h3>Object</h3>
+  <ng-container *ngIf="enableTestCase1">
+    <h3>Object</h3>
 
-  <blockquote [class.highlight]="isLinkTransport">
-    <h4>Default</h4>
-    <ag-render-test-v [test]="test"></ag-render-test-v>
+    <blockquote [class.highlight]="isLinkTransport">
+      <h4>Default</h4>
+      <ag-render-test-v [test]="test"></ag-render-test-v>
 
-    <h4>OnPush</h4>
-    <ag-render-test [test]="test"></ag-render-test>
-  </blockquote>
+      <h4>OnPush</h4>
+      <ag-render-test [test]="test"></ag-render-test>
+    </blockquote>
+  </ng-container>
 
-  <h3>String</h3>
+  <ng-container *ngIf="enableTestCase2">
+    <h3>String</h3>
 
-  <blockquote [class.highlight]="!isLinkTransport">
-    <h4>Default</h4>
-    <ag-render-test-v [test]="test2"></ag-render-test-v>
+    <blockquote [class.highlight]="isPrimitiveTransport">
+      <h4>Default</h4>
+      <ag-render-test-v [test]="test2"></ag-render-test-v>
 
-    <h4>OnPush</h4>
-    <ag-render-test [test]="test2"></ag-render-test>
-  </blockquote>
+      <h4>OnPush</h4>
+      <ag-render-test [test]="test2"></ag-render-test>
+    </blockquote>
+  </ng-container>
+
+  <ng-container *ngIf="enableTestCase3">
+    <h3>Observable</h3>
+
+    <blockquote [class.highlight]="isObservableTransport">
+      <h4>OnPush</h4>
+      <ag-render-test-o [test]="test3"></ag-render-test-o>
+    </blockquote>
+  </ng-container>
+
+  <ng-container *ngIf="enableTestCase4">
+    <h3>Detached component</h3>
+
+    <blockquote>
+      <ag-render-test-u></ag-render-test-u>
+    </blockquote>
+  </ng-container>
+
+  <ng-container *ngIf="enableTestCase5">
+    <h3>Observable and list data from server</h3>
+
+    <blockquote>
+      <ag-render-list [someData]="someData"></ag-render-list>
+    </blockquote>
+  </ng-container>
 </ag-layout-base>
